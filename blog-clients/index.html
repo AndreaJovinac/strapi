@@ -158,36 +158,7 @@
     
                     <div class="grid-sizer"></div>
 
-                    <article class="masonry__brick entry format-standard animate-this">
-                
-                        <div class="entry__thumb">
-                            <a href="single-standard.html" class="entry__thumb-link">
-                                <img src="/images/thumbs/masonry/woodcraft-600.jpg" alt="">
-                            </a>
-                        </div>
-            
-                        <div class="entry__text">
-                            <div class="entry__header">
-            
-                                <h2 class="entry__title"><a href="single-standard.html">This Is A Standard Format Post</a></h2>
-                                <div class="entry__meta">
-                                    <span class="entry__meta-cat">
-                                        <a href="#0">Management</a>
-                                    </span>
-                                    <span class="entry__meta-date">
-                                        <a href="single-standard.html">SEPT 27, 2021</a>
-                                    </span>
-                                </div>
-                                
-                            </div>
-                            <div class="entry__excerpt">
-                                <p>
-                                    Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-                                </p>
-                            </div>
-                        </div>
-            
-                    </article> <!-- end article -->
+                    <!-- articles -->
 
                 </div> <!-- end masonry -->
 
@@ -233,7 +204,38 @@
 
     </div> <!-- end s-wrap -->
 
+    <script id="articleCard" type="x-tmpl-mustache">
+        <article class="masonry__brick entry format-standard animate-this">
+                
+            <div class="entry__thumb">
+                <a href="single-standard.html" class="entry__thumb-link">
+                    <img src="/images/thumbs/masonry/woodcraft-600.jpg" alt="">
+                </a>
+            </div>
 
+            <div class="entry__text">
+                <div class="entry__header">
+
+                    <h2 class="entry__title"><a href="single-standard.html">{{title}}</a></h2>
+                    <div class="entry__meta">
+                        <span class="entry__meta-cat">
+                            <a href="#0">Management</a>
+                        </span>
+                        <span class="entry__meta-date">
+                            <a href="single-standard.html">SEPT 27, 2021</a>
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="entry__excerpt">
+                    <p>
+                        Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+                    </p>
+                </div>
+            </div>
+
+        </article> <!-- end article -->
+      </script>
     <!-- Java Script
     ================================================== -->
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
