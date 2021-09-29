@@ -1,2 +1,0 @@
-# strapi
-Projet Strapi blog
