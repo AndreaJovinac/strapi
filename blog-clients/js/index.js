@@ -55,7 +55,10 @@ $(document).ready(function () {
         /* */
         /* IMAGE */
         /* */
-        console.log(article.data.image.url);
+        console.log(article.image.url);
+
+        article.image.url = api_url + article.image.url; // on créer une constrante et colle Api_url à l'image url
+
         return Mustache.render(template, article);
       });
 
