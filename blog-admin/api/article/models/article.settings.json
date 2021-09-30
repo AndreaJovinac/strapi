@@ -18,7 +18,9 @@
     },
     "content": {
       "type": "richtext",
-      "required": false
+      "required": false,
+      "maxLength": 50,
+      "minLength": 50
     },
     "image": {
       "model": "file",
