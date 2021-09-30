@@ -220,17 +220,17 @@ const ssMasonryFolio = function () {
 const ssBricksAnimate = function () {
   const animateEl = $(".animate-this");
 
-  $WIN.on("load", function () {
-    setTimeout(function () {
-      animateEl.each(function (ctr) {
-        const el = $(this);
+  //$WIN.on("load", function () {
+  setTimeout(function () {
+    animateEl.each(function (ctr) {
+      const el = $(this);
 
-        setTimeout(function () {
-          el.addClass("animated");
-        }, ctr * 200);
-      });
-    }, 300);
-  });
+      setTimeout(function () {
+        el.addClass("animated");
+      }, ctr * 200);
+    });
+  }, 300);
+  //});
 
   $WIN.on("resize", function () {
     // remove animation classes
