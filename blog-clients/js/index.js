@@ -4,16 +4,18 @@ $(document).ready(function () {
 
   const api_url = "http://localhost:1337"; // on créer une constante et on met url dedans
   axios
-    .get(api_url + "/articles") // à partir de la bilothèque axios
+    .get(api_url + "/articles") // Tu récupéres l'url et tu le colles avec /artcilà partir de la bilothèque axios
     .then((response) => {
-      // Tu lui fais une promesse de lui envoyer un truc
-      console.log(response);
+      // Then. Tu lui fais une promesse de lui envoyer un truc
+
       const template = document.getElementById("articleCard").innerHTML; // tu créer une constante qui s'appelle template dans lequel tu prendre l'ID articleCard
 
       const articlesHtml = response.data.map((article) => {
-        /* */
+        /**********************/
+        /**********************/
         /* CATEGORIES */
-        /* */
+        /**********************/
+        /**********************/
 
         // Dès qu'on veut traiter un tableau, il faut que l'on part d'un tableau et elle va sortir un tableau des valeurs d'un tableau, on créer
         article.categories = article.categories // Article il y a des catgeories
@@ -23,9 +25,11 @@ $(document).ready(function () {
         // tu créer une constante qui s'appelle articleHTML dans lequel tu mets un tableau l'ID articleCard
         // console.log(article.categories[0].title); // <-- pour tester l'affichage des articles
 
-        /* */
+        /**********************/
+        /**********************/
         /* DATE */
-        /* */
+        /**********************/
+        /**********************/
 
         /* Pour formater des dates : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat*/
         const date = new Date(article.created_at); // créer une constante date et tu crées une nouvelle date et tu le mets
@@ -48,17 +52,19 @@ $(document).ready(function () {
           }).format(date)
         );*/
 
-        /* */
+        /**********************/
+        /**********************/
         /* CONTENT */
-        /* */
+        /**********************/
+        /**********************/
+
+        // Il faut juste ajouter {{content}} dans la balise html <p> au niveau du fichier.html
 
         /* */
         /* IMAGE */
         /* */
-        console.log(article.image.url);
-
+        //console.log(article.image.url); // Je fais un test
         article.image.url = api_url + article.image.url; // on créer une constrante et colle Api_url à l'image url
-
         return Mustache.render(template, article);
       });
 
